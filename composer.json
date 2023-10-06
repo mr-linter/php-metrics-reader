@@ -1,0 +1,23 @@
+{
+    "require": {
+        "mr-linter/metrics-contracts": "^0.10.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    },
+    "autoload": {
+        "psr-4": {
+            "MrLinter\\Metrics\\Reader\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MrLinter\\Metrics\\Reader\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": [
+            "./vendor/bin/phpunit --colors=always --configuration phpunit.xml"
+        ]
+    }
+}
