@@ -25,6 +25,6 @@ final class WithoutCategories implements Filter
 
     public function filter(Subject $subject): bool
     {
-        return ! isset($this->keys[$subject->key]);
+        return ! isset($this->keys[$subject->category]);
     }
 }
