@@ -3,7 +3,6 @@
 namespace MrLinter\Metrics\Reader\Filter;
 
 use MrLinter\Contracts\Metrics\Subject;
-use PHPUnit\Util\Filter;
 
 final class AnyOf extends Composite
 {

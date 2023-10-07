@@ -15,9 +15,6 @@ final class BufferStorage implements ReadableStorage
         $this->snapshots = $snapshots;
     }
 
-    /**
-     * @return iterable<Snapshot>
-     */
     public function read(): iterable
     {
         $snapshots = $this->snapshots;
