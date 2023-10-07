@@ -1,4 +1,14 @@
 {
+    "name": "mr-linter/metrics-reader",
+    "description": "Reader for metrics",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "artarts36",
+            "email": "temicska99@mail.ru"
+        }
+    ],
     "require": {
         "mr-linter/metrics-contracts": "^0.10.0"
     },
