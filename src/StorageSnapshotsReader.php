@@ -2,6 +2,7 @@
 
 namespace MrLinter\Metrics\Reader;
 
+use MrLinter\Metrics\Reader\Filter\Filter;
 use MrLinter\Metrics\Reader\Storage\ReadableStorage;
 
 final class StorageSnapshotsReader implements Reader
@@ -12,7 +13,7 @@ final class StorageSnapshotsReader implements Reader
     ) {
     }
 
-    public function read(\Closure $filter): iterable
+    public function read(Filter $filter): iterable
     {
         $reader = new SnapshotsReader($this->storage->read(), $this->titleRenderer);
 
