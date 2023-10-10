@@ -27,10 +27,9 @@ final class SnapshotsReader implements Reader
             }
 
             foreach ($snapshot->histograms as $histogram) {
-                $values = $histogram->all();
-                $lastValue = end($values);
+                $lastValue = $histogram->all()->last();
 
-                if ($lastValue === false) {
+                if ($lastValue === null) {
                     continue;
                 }
 

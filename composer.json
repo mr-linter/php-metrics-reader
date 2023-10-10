@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "mr-linter/metrics-contracts": "^0.11.0"
+        "mr-linter/metrics-contracts": "^0.13.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^10"

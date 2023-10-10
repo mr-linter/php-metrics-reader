@@ -3,6 +3,7 @@
 namespace MrLinter\Metrics\Reader\Tests\Unit;
 
 use MrLinter\Contracts\Metrics\CalculatedHistogramRecord;
+use MrLinter\Contracts\Metrics\CalculatedNumberList;
 use MrLinter\Contracts\Metrics\CounterRecord;
 use MrLinter\Contracts\Metrics\GaugeRecord;
 use MrLinter\Contracts\Metrics\Snapshot;
@@ -116,7 +117,7 @@ final class SnapshotsReaderTest extends TestCase
                         [],
                         [],
                         [
-                            new CalculatedHistogramRecord([], [], []),
+                            new CalculatedHistogramRecord(new CalculatedNumberList([], 0, 1), [], []),
                         ],
                     ),
                 ],
@@ -146,12 +147,20 @@ final class SnapshotsReaderTest extends TestCase
                         [],
                         [],
                         [
-                            new CalculatedHistogramRecord([
-                                1.0,
-                                2.0,
-                            ], [], [
-                                'host' => 'site.com',
-                            ]),
+                            new CalculatedHistogramRecord(
+                                new CalculatedNumberList(
+                                    [
+                                        1.0,
+                                        2.0,
+                                    ],
+                                    3.0,
+                                    2,
+                                ),
+                                [],
+                                [
+                                    'host' => 'site.com',
+                                ],
+                            ),
                         ],
                     ),
                     new Snapshot(
