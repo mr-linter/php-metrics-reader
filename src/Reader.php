@@ -6,11 +6,13 @@ use MrLinter\Contracts\Metrics\Subject;
 use MrLinter\Metrics\Reader\Filter\Filter;
 
 /**
- * @phpstan-type Filter = \Closure(Subject): bool
+ * Interface for metrics readers.
  */
 interface Reader
 {
     /**
+     * Read metrics by filter.
+     *
      * @return iterable<Metric>
      */
     public function read(Filter $filter): iterable;
